@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Comment extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('comment', function (Blueprint $table) {
+            $table->increments('id_comment');
+            $table->string('content_comment');
+            $table->tinyInteger('status_comment');
+            $table->integer('user_comment')->unsigned();
+            $table->foreign('user_comment')
+                  ->references('id')
+                  ->on('user')
+                  ->onDelete('cascade');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('comment');
+    }
+}

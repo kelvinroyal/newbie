@@ -1,0 +1,473 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    font-size:14px;
+    color:#333;
+}
+.logo h1 img{
+	width: 225px;
+	margin-top: 20px;
+	margin-left: 70px;
+}
+.right p{
+	text-align: center;
+	font-style: italic;
+}
+
+#header{
+	border-bottom: 1px red solid;
+}
+
+
+/*Tìm kiếm*/
+.navbar .navbar-search .dropdown-menu { min-width: 25px; }
+.dropdown-menu .label-icon { margin-left: 5px; }
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+#demo{
+    margin: 5px auto;
+}
+.carousel-inner img {
+      width: 100%;
+      height: auto;
+  }
+
+/*danh mục*/
+#danh-muc{
+    padding:0;
+    border:1px solid #ccc;
+    margin-top:5px;
+    height: auto;
+}   
+
+.h2-bar{
+    height:35px;
+    line-height:35px;
+    text-transform:capitalize;
+    font-size:15px;
+    font-weight:bold;
+    color:#FFF;
+    background:#3F3F3F;
+    padding:0 15px;
+    margin:0;
+}   
+#danh-muc ul{
+    padding: 0 15px;
+    margin-bottom: 5px;}   
+    #danh-muc ul li{
+        list-style:none;
+        height:35px;
+        line-height:35px;
+        font-size:15px;
+        font-weight:bold;
+        text-decoration:none;
+    }   
+    #danh-muc ul li a{
+        color:#000;
+    }
+    #danh-muc ul li:hover{
+        cursor:pointer;
+    }   
+    #danh-muc ul li:hover a{
+        
+        color:#EE0000;
+        text-decoration:none;
+    }
+#menu-but{
+    float:none;
+    background:#3F3F3F;
+    border-radius:0px;
+    margin:15px 0 0 0;
+    }
+#menu-but span{
+    background:#FFF;}
+
+
+    /*thống kê*/
+    #counter{
+        margin-top: 15px;
+        border:1px solid #ccc;  
+    }
+    #counter p{
+        padding:15px;
+    }
+    #counter p span{
+        font-weight:bold;
+        color:#C40000;
+    }
+
+
+    #body{
+        margin-top:5px;}
+
+        /*sản phẩm*/
+        #sanpham {
+            width: 100%;
+        }
+        #sanpham h3.title {
+            /* display: inline-block; */
+            /* position: relative; */
+        }
+        #sanpham h3.title span {
+            margin-left: -10px;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #fff;
+            background: #3F3F3F;
+            display: inline-block;
+            padding: 7.5px 15px;
+            position: relative;
+        }
+        #sanpham h3.title span:after {
+            content: "";
+            border-left: 25px solid #3F3F3F;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            border-top: 46px solid transparent;
+        }
+        #sanpham h3.title span:before {
+            content: "";
+            border-right: 10px solid #3F3F3F;
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            border-bottom: 20px solid transparent;
+        }
+
+        .product {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            border: 1px solid rgba(123, 110, 251, 0.14);
+        }
+        .item {
+            flex: 0 0 24%;
+            margin: 0.5% 0;
+            border:1px solid rgba(123, 110, 251, 0.14);
+            text-align: center;
+            padding: 5px 15px;
+            position: relative;
+            float: left;
+        }
+        .item img {
+            max-width: 100%;
+            height: 260px;
+        }
+        .item a.name {
+            color: #252525;
+            display: block; 
+        }
+        .item a.name:hover {
+            color: #f54;
+        }
+        .info  {
+            text-align: left!important;
+            font-weight: bold;
+        }
+        .info p {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 15px;
+            padding: 15px 0;
+        }
+        .info p.salary {
+            color: #f45;
+        }
+        .info p.price {
+            color: #847B7B;
+            text-decoration: line-through;
+        }
+        a.cart , a.heart, a.view {
+            position: absolute;
+            top: 0;
+            margin: 0 20px;
+            margin-left: -80px;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            color: #252525;
+            line-height: 45px;
+            background: #ddd;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            z-index: 3;
+        }
+        .item:hover a.cart,.item:hover a.heart,.item:hover a.view {
+            top: 45%;
+            opacity: 1;
+            visibility: visible;
+            
+        }
+        .item:hover .manche {
+            opacity: 1;
+        }
+        a.cart:hover , a.heart:hover, a.view:hover {
+            background: #f45;
+            color: #fff;
+            transform: rotate(360deg);
+            transition: all 0.2s , transform 0.5s;
+            transition-delay: 0s;
+        }
+
+        a.cart {
+            margin-left: -25px;
+            transition-delay: 0.2s;
+        }
+        a.heart {
+            margin-left: 30px;
+            transition-delay:  0.4s;
+        }
+        .manche {
+            position: absolute;
+            background: linear-gradient(0deg,rgba(255,255,255,1) 0%,rgba(68, 74, 255, 0.15) 62%);
+            height: 72%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 2;
+        }
+        .item:hover {
+            box-shadow: 0 0 5px rgba(68, 74, 255, 0.6);
+        }
+        .item:after {
+            content: "";
+            width: 0;
+            height: 5px;
+            background: #5b75fe;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .item:hover:after {
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+        @media (min-width: 572px) and (max-width:992px){
+            .item{
+                flex: 0 0 49.5%;
+            }
+        }
+        @media (max-width: 572px){
+            .item{
+                flex: 0 0 95%;
+            }
+        }
+
+        /*Footer*/
+        #footer-t{
+            background:#aeadac;
+            padding:30px 0;
+            margin-top:15px;}
+            .logo2{
+                height:98px;}
+                .content-f{
+                    color:#FFF;
+                    text-align:justify;}
+                    .content-f h3{
+                        font-size:18px;
+                        text-transform:capitalize;} 
+                        #footer-b{
+                            background:#605c59;
+                            position:relative;}
+                            .footer-b-item p{
+                                height:20px;
+                                line-height:38px;
+                                color:#FFF;
+                                font-size:12px;}
+                                #scroll{
+                                    position:absolute;
+                                    top:0;
+                                    right:0;}   
+/*#logo button{
+    background:#FFF;
+    margin-top:30px;}
+#logo button span{
+    background:#FF9600;}*/
+    .navbar-collapse{
+        padding:0;} 
+
+        /*bản đồ*/
+        .map{
+            margin-top: 5px;
+        }
+        .map img{
+            width: 100%;
+        }
+
+        .banner img{
+            width: 100%;
+            margin-top: 15px;
+        }
+        @media (max-width:992px){
+            .banner{
+                display: none;
+            }
+            .slide-fix{
+                display: none;
+            }
+        }
+
+
+/*thông tin xe*/
+#anh_xe img{
+    width: 100%;
+    border: 1px blue solid;
+}
+
+/*Form login*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 2px 20px;
+    margin-top: 8px;
+    height: 38px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: red;
+    color: white;
+    padding: 0 20px;
+    margin: 8px 14px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+#comments{
+    padding:15px 0;
+    }   
+#comments ul{
+    border-bottom:1px dotted #ccc;} 
+#comments ul li{
+    list-style:none;
+    }
+#comments ul li.comm-name{
+    font-weight:bold;
+    color:#000;
+    }   
+#comments ul li.comm-details{
+    line-height:18px;
+    padding:10px 0;}
+.p-email{
+    color: white;
+}

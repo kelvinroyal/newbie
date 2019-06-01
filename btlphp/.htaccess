@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^xemoi$ index.php?page_lg=xemoi
+RewriteRule ^banchay$ index.php?page_lg=banchay
